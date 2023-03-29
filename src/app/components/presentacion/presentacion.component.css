@@ -1,0 +1,110 @@
+/* BANNER */
+
+.banner {
+    background-image: url(../../../assets/Imagenes/1039991.jpg);
+    padding: 10px;
+    height: 100vh;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.contenido-banner {
+    margin-top: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.texto-banner {
+    color: var(--main-color);
+    margin-left: 60px;
+}
+
+.texto-banner h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+    opacity: 0;
+    animation-name: animacion1;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.texto-banner h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+    padding-top: 30px;
+    padding-left: 30px;
+    opacity: 0;
+    animation-name: animacion2;
+    animation-duration: 1s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+.img_circulo {
+    background-image: url(../../../assets/Imagenes/IMG_3441.PNG);
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 300px;
+    margin-right: 60px;
+    opacity: 0;
+    animation-name: animacion3;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacion1 {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes animacion2 {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes animacion3 {
+    0% {
+        opacity: 0;
+        transform: scale(2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .banner {
+        height: 90vh;
+    }
+
+    .contenido-banner {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding-top: 100px;
+    }
+
+    .rounded-circle {
+        width: 200px;
+        height: 200px;
+        margin-top: 50px;
+        margin-left: 90px; 
+    }    
+}

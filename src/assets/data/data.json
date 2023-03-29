@@ -1,0 +1,11 @@
+{
+  "id": 1,
+  "name": "Jorge Arnal",
+  "email": "jorge.arnal08@gmail.com",
+  "occupation": "Full Stack Developer Jr.",
+  "address": {
+    "street": "Sargento Cabral",
+    "number": "40",
+    "postalcode": "1870"
+  }
+}

@@ -1,0 +1,22 @@
+/* EXPERIENCIA */
+
+.parrafo {
+    color: var(--main-color);
+}
+
+#exp_p {
+    color: var(--main-color);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+#titulo {
+    font-family: 'Tilt Warp', cursive;
+    color: var(--main-color);
+    margin-top: 50px;
+}

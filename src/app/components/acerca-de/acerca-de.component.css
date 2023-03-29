@@ -1,0 +1,33 @@
+/* ACERCA DE */
+
+.acercaDe {
+    height: 80vh;
+}
+
+#titulo {
+    font-family: 'Tilt Warp', cursive;
+    color: var(--main-color);
+    margin-top: 50px;
+}
+
+#card_foto {
+    background-color: #391953;
+    border-style: none;
+    margin-top: 60px;
+}
+
+#cuerpo_card {
+    color: var(--main-color);
+}
+
+.fotoPerfil {
+    -webkit-box-shadow: -5px -5px 10px 0px rgba(0, 0, 0, 0.81);
+    -moz-box-shadow: -5px -5px 10px 0px rgba(0, 0, 0, 0.81);
+    box-shadow: -5px -5px 10px 0px rgba(0, 0, 0, 0.81);
+}
+
+@media screen and (max-width: 767px) {
+    .acercaDe {
+        height: 120vh;
+    }
+}

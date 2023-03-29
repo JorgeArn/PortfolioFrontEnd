@@ -1,0 +1,69 @@
+/* LOGIN FORM */
+
+form {
+    position: absolute;
+    height: 88vh;
+    width: 100%;
+    display: none;
+    backdrop-filter: blur(0px);
+    animation-name: blureo;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.caja_formulario {
+    position: absolute;
+    background-color: antiquewhite;
+    border: solid black .3rem;
+    border-radius: 10px;
+    left: 37%;
+    top: 22%;
+    height: 400px;
+    width: 350px;
+    opacity: 0;
+    animation-name: animacionLogin;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.formulario {
+    position: absolute;
+    left: 8%;
+    top: 14%;
+    height: 340px;
+    width: 285px;
+}
+
+@keyframes blureo {
+    0% {
+        backdrop-filter: blur(0px);
+        
+    }
+    100% {
+        backdrop-filter: blur(10px);
+        
+    }
+}
+
+@keyframes animacionLogin {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .caja_formulario {
+        left: 13%;
+    }
+
+    form {
+        height: 90%;
+    }
+}

@@ -1,0 +1,48 @@
+/* ESTILOS NAVBAR */
+
+.navbar-brand {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-brand p {
+    margin-top: 33px;
+    font-size: 15px;
+}
+
+#navbarText {
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.redes:hover {
+    filter: opacity(0.5);
+    transform: scale(1.3);
+}
+
+
+.redes {
+    transition: 0.8s transform;
+} 
+
+#menu {
+    position: relative;
+}
+
+#menu:after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #f987f3;
+    filter: drop-shadow(1px 3px 5px rgba(254, 64, 247, 0.841));
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transition: all .5s;
+    will-change: width;
+}
+
+#menu:hover:after {
+    width: 100%;
+    right: 0;  
+}

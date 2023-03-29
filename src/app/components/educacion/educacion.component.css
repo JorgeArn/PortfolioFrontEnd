@@ -1,0 +1,22 @@
+/* EDUCACION */
+
+.img_ed {
+    width: 110px;
+    height: 110px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+
+#edu_p {
+    color: var(--main-color);
+}
+
+.fw-normal {
+    color: var(--main-color);
+}
+
+#titulo {
+    font-family: 'Tilt Warp', cursive;
+    color: var(--main-color);
+    margin-top: 50px;
+}
