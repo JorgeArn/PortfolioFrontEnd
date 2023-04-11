@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/services/portfolio.service';
+import { persona } from 'src/app/model/persona.model';
+import { PersonaService } from 'src/app/service/persona.service';
+
 
 @Component({
   selector: 'app-acerca-de',
@@ -8,19 +10,15 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class AcercaDeComponent implements OnInit {
 
-  //se crea la variable miPortfolio para usarla en el template
-  miPortfolio:any;
+  //se crea la variable persona para usarla en el template
+  persona: persona = new persona("", "", "", "", "");
 
-  constructor(private datosPortfolio:PortfolioService) {
+  constructor(public personaService: PersonaService) {
 
   }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      console.log(data);
-      //se asigna a miPortfolio el valor que se obtuvo en esta función (data)
-      this.miPortfolio = data; 
-    });
+    this.personaService.getPersona().subscribe(data => {this.persona = data});
   }
 
 }

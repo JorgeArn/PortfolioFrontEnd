@@ -11,7 +11,6 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { PortfolioService } from './services/portfolio.service';
 import { HttpClientModule} from '@angular/common/http';
 
 
