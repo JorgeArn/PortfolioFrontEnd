@@ -11,7 +11,7 @@ import { PersonaService } from 'src/app/service/persona.service';
 export class AcercaDeComponent implements OnInit {
 
   //se crea la variable persona para usarla en el template
-  persona: persona = new persona("", "", "", "", "");
+  persona: persona = new persona("", "", "", "");
 
   constructor(public personaService: PersonaService) {
 
