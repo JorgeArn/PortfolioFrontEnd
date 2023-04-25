@@ -2,16 +2,14 @@
 <section class="container px-4 py5">
     <h2 id="titulo" class="pb-2 border-bottom">Experiencia</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        <div class="feature col">
+        <div class="feature col" *ngFor="let Experiencia of expe">
             <div class="feature-icon mb-3">
-                <img src="./assets/Imagenes/CMA_Logo.jpeg" alt="CMA_Logo" width="70em" height="70em">
+                <img [src]="Experiencia.urlLogo" alt="CMA_Logo" width="70em" height="70em">
             </div>
-            <h4 class="parrafo fs-2">Casa de Moneda Argentina</h4>
-            <h5 class="parrafo">2015 - Presente</h5>
-            <p id="exp_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus maxime perferendis
-                porro. Corporis
-                necessitatibus beatae ex incidunt! Aliquid atque dolor, incidunt neque quaerat maxime architecto, ea
-                saepe veritatis impedit nobis!
+            <h4 class="parrafo fs-2">{{Experiencia.nombreEmpresa}}</h4>
+            <h5 class="parrafo">{{Experiencia.fechaInicio}} - {{Experiencia.fechaFin}}</h5>
+            <p id="exp_p">
+                {{Experiencia.descripcion}}
             </p>
             <a href="#" class="icon-link d-inline-flex align-items-center">Call to action</a>
         </div>
@@ -28,19 +26,7 @@
             </p>
             <a href="#" class="icon-link d-inline-flex align-items-center">Call to action</a>
         </div>
-        <div class="feature col">
-            <div class="feature-icon mb-3">
-                <img src="" alt="" width="70em" height="70em">
-            </div>
-            <h4 class="parrafo fs-2">Feature title</h4>
-            <h5 class="parrafo">Fecha</h5>
-            <p id="exp_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus maxime perferendis
-                porro. Corporis
-                necessitatibus beatae ex incidunt! Aliquid atque dolor, incidunt neque quaerat maxime architecto, ea
-                saepe veritatis impedit nobis!
-            </p>
-            <a href="#" class="icon-link d-inline-flex align-items-center">Call to action</a>
-        </div>
+        
     </div>
 </section>
 <div id="educacion" class="divider"></div>
