@@ -16,6 +16,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor.service';
+import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { interceptorProvider } from './service/interceptor.service';
     SkillsComponent,
     ProyectosComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent
   ],
   imports: [
     BrowserModule,

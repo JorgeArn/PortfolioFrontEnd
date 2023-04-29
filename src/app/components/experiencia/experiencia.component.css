@@ -20,3 +20,21 @@
     color: var(--main-color);
     margin-top: 50px;
 }
+
+.bi-pencil-fill {
+    padding-right: 2rem;
+}
+
+.bi {
+    font-size: 1.3em;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn {
+    position: absolute;
+    left: 81%;
+}

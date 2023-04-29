@@ -1,0 +1,26 @@
+section {
+    background: url(../../../assets/Imagenes/1039991.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.container {
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    width: 50vw;
+}
+
+label {
+    color: white;
+}
+
+.años {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btn {
+    margin-top: 15px;
+}
