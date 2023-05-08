@@ -1,0 +1,35 @@
+<section>
+    <div class="container" *ngIf="edu">
+        <div class="row">
+            <div>
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre de la Educación</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="edu.nombre" required>
+                    </div>
+                    <div class="años">
+                        <div class="form-group">
+                            <label for="fechaInicio">Año de inicio</label>
+                            <input type="text" class="form-control" id="fechaInicio" name="fechaInicio" [(ngModel)]="edu.fechaInicio" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fechaFin">Año de fin</label>
+                            <input type="text" class="form-control" id="fechaFin" name="fechaFin" [(ngModel)]="edu.fechaFin" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripción</label>
+                        <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="edu.descripcion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="urlLogo">URL del logo</label>
+                        <input type="text" class="form-control" id="urlLogo" name="urlLogo" [(ngModel)]="edu.urlLogo" required>
+                    </div>
+                    <button class="btn btn-outline-info">Guardar Educación</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</section>
+

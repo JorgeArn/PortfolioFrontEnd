@@ -11,9 +11,23 @@ import { Observable } from 'rxjs';
 export class PersonaService {
   URL = 'http://localhost:8080/personas/';
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  public getPersona(): Observable<persona>{
-    return this.http.get<persona>(this.URL + 'traer/perfil');
+  public lista(): Observable<persona[]> {
+    return this.httpClient.get<persona[]>(this.URL + 'lista');
   }
+
+  public detail(id: number): Observable<persona> {
+    return this.httpClient.get<persona>(this.URL + `detail/${id}`);
+  }
+
+  public save(perso: persona): Observable<any> {
+    return this.httpClient.post<any>(this.URL + 'crear', perso);
+  }
+
+  public update(id: number, perso: persona): Observable<any> {
+    return this.httpClient.put<any>(this.URL + `editar/${id}`, perso);
+  }
+
+  
 }

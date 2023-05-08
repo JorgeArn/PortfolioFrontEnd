@@ -1,57 +1,20 @@
 <!-- PROYECTOS -->
 
-<section id="portfolio">
+<section class="container">
     <h2 id="titulo3" class="pb-2 border-bottom">PROYECTOS</h2>
-    <div class="fila">
-        <div class="proyecto">
-            <div class="overlay"></div>
-            <img src="./assets/Imagenes/proyecto_portfolio.jpg" alt="">
-            <div class="info">
-                <h4>Portfolio Web Responsive</h4>
-                <p>2022 - 2023</p>
+    <button type="button" class="btn btn-primary" routerLink="/nuevoproy" *ngIf="isLogged">Agregar proyecto</button>
+        <div class="row row-cols-1 row-cols-md-3 g-5">
+            <div class="col" *ngFor="let Proyectos of proyecto">
+                <div class="card">
+                    <img src="../../../assets/Imagenes/proyecto_portfolio.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{Proyectos.nombre}}</h5>
+                        <h6>{{Proyectos.fechaInicio}} - {{Proyectos.fechaFin}}</h6>
+                        <p class="card-text">{{Proyectos.descripcion}}</p>
+                    </div>
+                </div>
+                <a routerLink="/editproy/{{Proyectos.id}}"><i class="bi bi-pencil-fill" *ngIf="isLogged"></i></a>
+                <a href="#proyectos" (click)="delete(Proyectos.id)"><i class="bi bi-trash-fill" *ngIf="isLogged"></i></a>
             </div>
         </div>
-        <div class="proyecto">
-            <div class="overlay"></div>
-            <img src="./assets/Imagenes/proyecto_portfolio.jpg" alt="">
-            <div class="info">
-                <h4>Descripción del Proyecto</h4>
-                <p>Diseño Web</p>
-            </div>
-        </div>
-        <div class="proyecto">
-            <div class="overlay"></div>
-            <img src="./assets/Imagenes/proyecto_portfolio.jpg" alt="">
-            <div class="info">
-                <h4>Descripción del Proyecto</h4>
-                <p>Diseño Web</p>
-            </div>
-        </div>
-    </div>
-    <div class="fila">
-        <div class="proyecto">
-            <div class="overlay"></div>
-            <img src="./assets/Imagenes/proyecto_portfolio.jpg" alt="">
-            <div class="info">
-                <h4>Descripción del Proyecto</h4>
-                <p>Diseño Web</p>
-            </div>
-        </div>
-        <div class="proyecto">
-            <div class="overlay"></div>
-            <img src="./assets/Imagenes/proyecto_portfolio.jpg" alt="">
-            <div class="info">
-                <h4>Descripción del Proyecto</h4>
-                <p>Diseño Web</p>
-            </div>
-        </div>
-        <div class="proyecto">
-            <div class="overlay"></div>
-            <img src="./assets/Imagenes/proyecto_portfolio.jpg" alt="">
-            <div class="info">
-                <h4>Descripción del Proyecto</h4>
-                <p>Diseño Web</p>
-            </div>
-        </div>
-    </div>
 </section>

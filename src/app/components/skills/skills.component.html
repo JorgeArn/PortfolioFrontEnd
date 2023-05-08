@@ -1,51 +1,22 @@
 <!-- HARD AND SOFT SKILLS -->
 <div class="contenedor-skills" id="hsSkills">
     <h2 id="titulo2" class="container pb-2 border-bottom">HARD & SOFT SKILLS</h2>
-    <div class="skill">
-        <div class="info">
-            <p><span class="lista"></span>HTML & CSS</p>
-            <span class="porcentaje">90%</span>
-        </div>
-        <div class="barra">
-            <div id="html" class=""></div>
-        </div>
+    <div class="boton">
+        <button type="button" class="btn btn-primary" routerLink="/nuevaskill" *ngIf="isLogged">Agregar Skill</button>
     </div>
-    <div class="skill">
-        <div class="info">
-            <p><span class="lista"></span>Javascript</p>
-            <span class="porcentaje">80%</span>
+    <div class="skill" *ngFor="let Skills of skl">
+        <div class="caja-skill">
+            <div class="info">
+                <p><span class="lista"></span>{{Skills.nombre}}</p>
+                <span class="porcentaje">{{Skills.porcentaje}}%</span>
+            </div>
+            <div class="barra">
+                <div id="{{Skills.nombre}}" class=""></div>
+            </div>
         </div>
-        <div class="barra">
-            <div id="js" class=""></div>
-        </div>
-    </div>
-    <div class="skill">
-        <div class="info">
-            <p><span class="lista"></span>Angular</p>
-            <span class="porcentaje">55%</span>
-        </div>
-        <div class="barra">
-            <div id="angular" class=""></div>
-        </div>
-    </div>
-    <div class="skill">
-        <div class="info">
-            <p><span class="lista"></span>SQL</p>
-            <span class="porcentaje">70%</span>
-        </div>
-        <div class="barra">
-            <div id="sql" class=""></div>
-        </div>
-    </div>
-    <div class="skill">
-        <div class="info">
-            <p><span class="lista"></span>Ingles</p>
-            <span class="porcentaje">60%</span>
-        </div>
-        <div class="barra">
-            <div id="ingles" class=""></div>
+        <div class="iconos">
+            <a routerLink="/editskill/{{Skills.id}}"><i class="bi bi-pencil-fill" *ngIf="isLogged"></i></a>
+            <a href="#skills" (click)="delete(Skills.id)"><i class="bi bi-trash-fill" *ngIf="isLogged"></i></a>
         </div>
     </div>
 </div>
-<div id="proyectos" class="divider"></div>
-

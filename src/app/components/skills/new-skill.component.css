@@ -16,11 +16,6 @@ label {
     color: white;
 }
 
-.años {
-    display: flex;
-    justify-content: flex-start;
-}
-
 .btn {
     margin-top: 15px;
 }

@@ -1,35 +1,17 @@
 <!-- EDUCACION -->
 <section class="container">
     <h2 id="titulo" class="pb-2 border-bottom">EDUCACIÓN</h2>
-    <div class="row mt-5 mb-5">
-        <div class="col-lg-4">
-            <img src="./assets/Imagenes/INTI.jpg" alt="" class="img_ed rounded-circle">
-            <h2 class="fw-normal">Instituto Nacional de Tecnologia Industrial</h2>
-            <h4 class="fw-normal">2022 - 2023</h4>
-            <p id="edu_p">Curso Full Stack Developer Jr. <br> Curso introducción a la programación</p>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div>
-        <div class="col-lg-4">
-            <img src="./assets/Imagenes/iac.jpeg" alt="" class="img_ed rounded-circle">
-            <h2 class="fw-normal">Instituto Argentino de Computación</h2>
-            <h4 class="fw-normal">2010 - 2012</h4>
-            <p id="edu_p">Técnico en armado y reparación de PC <br> Operador de Office Full (Word, Excel, Access,
-                Power Point)</p>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div>
-        <div class="col-lg-4">
-            <img src="./assets/Imagenes/CSM.png" alt="" class="img_ed rounded-circle">
-            <h2 class="fw-normal">Colegio San Martín</h2>
-            <h4 class="fw-normal">2009</h4>
-            <p id="edu_p">Bachiller en Humanidades y Ciencias Sociales</p>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div>
-        <div class="col-lg-4">
-            <img src="./assets/Imagenes/CSM.png" alt="" class="img_ed rounded-circle">
-            <h2 class="fw-normal">Heading</h2>
-            <p id="edu_p">And lastly this, the third column of representative placeholder content.</p>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+    <button type="button" class="btn btn-primary" routerLink="/nuevaedu" *ngIf="isLogged">Agregar Educación</button>
+    <div class="row mt-5 mb-5 ">
+        <div class="col-lg-4" *ngFor="let Educacion of edu">
+            <div>
+                <img [src]="Educacion.urlLogo" alt="" class="img_ed rounded-circle">
+                <h2 class="fw-normal">{{Educacion.nombre}}</h2>
+                <h4 class="fw-normal">{{Educacion.fechaInicio}} - {{Educacion.fechaFin}}</h4>
+                <p id="edu_p">{{Educacion.descripcion}}</p>
+                <a routerLink="/editedu/{{Educacion.id}}"><i class="bi bi-pencil-fill" *ngIf="isLogged"></i></a>
+                <a href="#educacion" (click)="delete(Educacion.id)"><i class="bi bi-trash-fill" *ngIf="isLogged"></i></a>
+            </div>
         </div>
     </div>
 </section>
-<div id="skills" class="divider"></div>

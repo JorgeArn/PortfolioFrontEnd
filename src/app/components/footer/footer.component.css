@@ -3,3 +3,7 @@
 div span {
     color: var(--main-color);
 }
+
+#footer {
+    margin: 0;
+}
