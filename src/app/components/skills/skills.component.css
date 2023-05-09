@@ -1,5 +1,3 @@
-/* HARD AND SOFT SKILLS */
-
 .contenedor-skills {
     background: linear-gradient(#391953, rgba(33, 16, 16, .8)), url("../../../assets/Imagenes/1947484.jpg");
     background-attachment: fixed;
@@ -23,7 +21,7 @@
     width: 100%;
     margin: 0;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .btn {
