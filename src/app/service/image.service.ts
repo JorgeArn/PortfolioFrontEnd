@@ -24,8 +24,7 @@ export class ImageService {
     .then(async response => {
       for(let item of response.items) {
         this.url = await getDownloadURL(item);
-        //console.log("La URL es: " + this.url);
-        console.log("La posición 2 del array es: " + this.url[1]);
+        console.log("La URL es: " + this.url);
       }
     })
     .catch(error => console.log(error))
