@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
 import { ExperienciaService } from 'src/app/service/experiencia.service';
+import { ImageService } from 'src/app/service/image.service';
 
 @Component({
   selector: 'app-edit-experiencia',
@@ -11,7 +12,8 @@ import { ExperienciaService } from 'src/app/service/experiencia.service';
 export class EditExperienciaComponent implements OnInit {
   expLab: Experiencia = null;
 
-  constructor(private experienciaService: ExperienciaService, private activatedRoute: ActivatedRoute, private router: Router) { }
+  constructor(private experienciaService: ExperienciaService, private activatedRoute: ActivatedRoute, private router: Router,
+    public imageService: ImageService) { }
 
   ngOnInit(): void {
     //captura el id de la exp que quiero modificar
@@ -29,6 +31,7 @@ export class EditExperienciaComponent implements OnInit {
 
   onUpdate(): void {
     const id = this.activatedRoute.snapshot.params['id'];
+    this.expLab.urlLogo = this.imageService.url;
     this.experienciaService.update(id, this.expLab).subscribe({
       next: (data) => {
         this.router.navigate(['']);
@@ -37,6 +40,12 @@ export class EditExperienciaComponent implements OnInit {
         this.router.navigate(['']);
       }
     })
+  }
+
+  uploadImage($event: any) {
+    const id = this.activatedRoute.snapshot.params['id'];
+    const name = "logo_" + id;
+    this.imageService.uploadImage($event, name)
   }
 
 }

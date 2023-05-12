@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { persona } from 'src/app/model/persona.model';
+import { ImageService } from 'src/app/service/image.service';
 import { PersonaService } from 'src/app/service/persona.service';
 
 @Component({
@@ -11,7 +12,8 @@ import { PersonaService } from 'src/app/service/persona.service';
 export class EditAcercaDeComponent implements OnInit {
   persona: persona = null;
 
-  constructor(private personaService: PersonaService, private activatedRoute: ActivatedRoute, private router: Router) { }
+  constructor(private personaService: PersonaService, private activatedRoute: ActivatedRoute, private router: Router,
+    public imageService: ImageService) { }
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];
@@ -19,7 +21,7 @@ export class EditAcercaDeComponent implements OnInit {
     this.personaService.detail(id).subscribe({
       next: (data) => {
         this.persona = data;
-      }, error: (err)=> {
+      }, error: (err) => {
         this.router.navigate(['']);
       }
     })
@@ -27,6 +29,7 @@ export class EditAcercaDeComponent implements OnInit {
 
   onUpdate(): void {
     const id = this.activatedRoute.snapshot.params['id'];
+    this.persona.url_foto = this.imageService.url; 
     this.personaService.update(id, this.persona).subscribe({
       next: (data) => {
         this.router.navigate(['']);
@@ -37,8 +40,10 @@ export class EditAcercaDeComponent implements OnInit {
     })
   }
 
-  uploadImage($event:any) {
-
+  uploadImage($event: any) {
+    const id = this.activatedRoute.snapshot.params['id'];
+    const name = "perfil_" + id;
+    this.imageService.uploadImage($event, name)
   }
 
 }
