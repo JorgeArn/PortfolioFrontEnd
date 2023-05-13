@@ -3,8 +3,9 @@
 <section class="container">
     <h2 id="titulo3" class="pb-2 border-bottom">PROYECTOS</h2>
     <button type="button" class="btn btn-primary" routerLink="/nuevoproy" *ngIf="isLogged">Agregar proyecto</button>
-        <div class="row row-cols-1 row-cols-md-3 g-5">
-            <div class="col" *ngFor="let Proyectos of proyecto">
+    <div class="row row-cols-1 row-cols-md-3 g-5">
+        <div class="col" *ngFor="let Proyectos of proyecto">
+            <a id="link-proy" href="">
                 <div class="card">
                     <img [src]="Proyectos.urlImagen" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -13,8 +14,11 @@
                         <p class="card-text">{{Proyectos.descripcion}}</p>
                     </div>
                 </div>
-                <a routerLink="/editproy/{{Proyectos.id}}"><i class="bi bi-pencil-fill" *ngIf="isLogged"></i></a>
-                <a href="#proyectos" (click)="delete(Proyectos.id)"><i class="bi bi-trash-fill" *ngIf="isLogged"></i></a>
-            </div>
+            </a>
+            <a id="iconos" routerLink="/editproy/{{Proyectos.id}}"><i class="bi bi-pencil-fill"
+                    *ngIf="isLogged"></i></a>
+            <a id="iconos" href="#proyectos" (click)="delete(Proyectos.id)"><i class="bi bi-trash-fill"
+                    *ngIf="isLogged"></i></a>
         </div>
+    </div>
 </section>

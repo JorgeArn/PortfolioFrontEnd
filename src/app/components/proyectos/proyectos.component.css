@@ -30,9 +30,14 @@
     font-size: 1.3em;
 }
 
-a {
+#iconos {
     text-decoration: none;
     color: white;
+}
+
+#link-proy {
+    text-decoration: none;
+    color: black;
 }
 
 .btn {
