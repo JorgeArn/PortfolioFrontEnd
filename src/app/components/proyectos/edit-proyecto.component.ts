@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Proyectos } from 'src/app/model/proyectos';
+import { ImageProyService } from 'src/app/service/image-proy.service';
 import { ProyectosService } from 'src/app/service/proyectos.service';
 
 @Component({
@@ -11,7 +12,8 @@ import { ProyectosService } from 'src/app/service/proyectos.service';
 export class EditProyectoComponent implements OnInit {
   proyecto: Proyectos = null;
 
-  constructor(private proyectosService: ProyectosService, private activatedRoute: ActivatedRoute, private router: Router) { }
+  constructor(private proyectosService: ProyectosService, private activatedRoute: ActivatedRoute, private router: Router,
+    public imageProyService: ImageProyService) { }
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];
@@ -27,7 +29,9 @@ export class EditProyectoComponent implements OnInit {
 
   onUpdate(): void {
     const id = this.activatedRoute.snapshot.params['id'];
-
+    if (this.imageProyService.url != "") {
+      this.proyecto.urlImagen = this.imageProyService.url;
+    }
     this.proyectosService.update(id, this.proyecto).subscribe({
       next: (data) => {
         this.router.navigate(['']);
@@ -36,6 +40,18 @@ export class EditProyectoComponent implements OnInit {
         this.router.navigate(['']);
       }
     })
+    this.imageProyService.clearUrl();
+  }
+
+  uploadImage($event: any) {
+    const id = this.activatedRoute.snapshot.params['id'];
+    const name = "imagen_" + id;
+    this.imageProyService.uploadImage($event, name)
+  }
+
+  cancel(): void {
+    this.imageProyService.clearUrl();
+    this.router.navigate(['']);
 
   }
 
