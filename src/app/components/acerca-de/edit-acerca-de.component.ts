@@ -29,7 +29,9 @@ export class EditAcercaDeComponent implements OnInit {
 
   onUpdate(): void {
     const id = this.activatedRoute.snapshot.params['id'];
-    this.persona.url_foto = this.imageService.url; 
+    if (this.imageService.url != "") {
+      this.persona.url_foto = this.imageService.url;
+    } 
     this.personaService.update(id, this.persona).subscribe({
       next: (data) => {
         this.router.navigate(['']);
@@ -38,12 +40,19 @@ export class EditAcercaDeComponent implements OnInit {
         this.router.navigate(['']);
       }
     })
+    this.imageService.clearUrl();
   }
 
   uploadImage($event: any) {
     const id = this.activatedRoute.snapshot.params['id'];
     const name = "perfil_" + id;
     this.imageService.uploadImage($event, name)
+  }
+
+  cancel(): void {
+    this.imageService.clearUrl();
+    this.router.navigate(['']);
+
   }
 
 }
