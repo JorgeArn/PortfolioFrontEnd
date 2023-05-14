@@ -13,6 +13,7 @@ export class NewProyectoComponent implements OnInit {
   fechaInicio: string = '';
   fechaFin: string = '';
   descripcion: string = '';
+  urlProyecto: string = '';
   urlImagen: string = '';
 
   constructor(private proyectosService: ProyectosService, private router: Router) { }
@@ -22,7 +23,7 @@ export class NewProyectoComponent implements OnInit {
   }
 
   onCreate(): void {
-    const proyecto = new Proyectos(this.nombre, this.fechaInicio, this.fechaFin, this.descripcion, this.urlImagen);
+    const proyecto = new Proyectos(this.nombre, this.fechaInicio, this.fechaFin, this.descripcion, this.urlProyecto, this.urlImagen);
     this.proyectosService.save(proyecto).subscribe({next: (data) => {
       alert("Proyecto añadido");
       this.router.navigate(['']);

@@ -5,7 +5,7 @@
     <button type="button" class="btn btn-primary" routerLink="/nuevoproy" *ngIf="isLogged">Agregar proyecto</button>
     <div class="row row-cols-1 row-cols-md-3 g-5">
         <div class="col" *ngFor="let Proyectos of proyecto">
-            <a id="link-proy" href="">
+            <a id="link-proy" [href]="Proyectos.urlProyecto">
                 <div class="card">
                     <img [src]="Proyectos.urlImagen" class="card-img-top" alt="...">
                     <div class="card-body">

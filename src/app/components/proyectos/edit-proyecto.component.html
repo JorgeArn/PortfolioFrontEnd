@@ -26,6 +26,10 @@
                             [(ngModel)]="proyecto.descripcion" required></textarea>
                     </div>
                     <div class="form-group">
+                        <label for="urlProyecto">URL del proyecto</label>
+                        <input type="text" class="form-control" id="urlProyecto" name="urlProyecto" [(ngModel)]="proyecto.urlProyecto" required>
+                    </div>
+                    <div class="form-group">
                         <label for="urlLogo">Imagen del proyecto</label>
                         <input type="file" class="form-control" id="urlLogo" name="urlLogo"
                             [(ngModel)]="proyecto.urlImagen" required (change)="uploadImage($event)"
