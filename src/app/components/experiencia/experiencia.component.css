@@ -31,7 +31,16 @@ a {
     color: white;
 }
 
-.btn {
-    position: absolute;
-    left: 81%;
+.boton {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (min-width: 360px) and (max-width: 500px) {
+    .btn {
+        position: unset;
+        margin-left: 75px;
+    }
 }

@@ -1,7 +1,9 @@
 <!-- EXPERIENCIA -->
 <section class="container px-4 py5">
     <h2 id="titulo" class="pb-2 border-bottom">Experiencia</h2>
-    <button type="button" class="btn btn-primary" routerLink="/nuevaexp" *ngIf="isLoged">Agregar Experiencia</button>
+    <div class="boton">
+        <button type="button" class="btn btn-primary" routerLink="/nuevaexp" *ngIf="isLoged">Agregar Experiencia</button>
+    </div>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
         <div class="feature col" *ngFor="let Experiencia of expe">
             <div class="feature-icon mb-3">

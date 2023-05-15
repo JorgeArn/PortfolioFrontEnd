@@ -2,7 +2,9 @@
 
 <section class="container">
     <h2 id="titulo3" class="pb-2 border-bottom">PROYECTOS</h2>
-    <button type="button" class="btn btn-primary" routerLink="/nuevoproy" *ngIf="isLogged">Agregar proyecto</button>
+    <div class="boton">
+        <button type="button" class="btn btn-primary" routerLink="/nuevoproy" *ngIf="isLogged">Agregar proyecto</button>
+    </div>
     <div class="row row-cols-1 row-cols-md-3 g-5">
         <div class="col" *ngFor="let Proyectos of proyecto">
             <a id="link-proy" [href]="Proyectos.urlProyecto">

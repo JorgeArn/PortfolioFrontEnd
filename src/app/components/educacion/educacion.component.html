@@ -1,7 +1,9 @@
 <!-- EDUCACION -->
 <section class="container">
     <h2 id="titulo" class="pb-2 border-bottom">EDUCACIÓN</h2>
-    <button type="button" class="btn btn-primary" routerLink="/nuevaedu" *ngIf="isLogged">Agregar Educación</button>
+    <div class="boton">
+        <button type="button" class="btn btn-primary" routerLink="/nuevaedu" *ngIf="isLogged">Agregar Educación</button>
+    </div>
     <div class="row mt-5 mb-5 ">
         <div class="col-lg-4" *ngFor="let Educacion of edu">
             <div>

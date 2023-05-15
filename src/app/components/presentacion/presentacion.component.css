@@ -84,9 +84,17 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 360px) and (max-width: 500px) {
     .banner {
         height: 100vh;
+    }
+
+    .texto-banner h1 {
+        font-size: 28px;
+    }
+
+    .texto-banner h2 {
+        font-size: 20px;
     }
 
     .img_circulo {

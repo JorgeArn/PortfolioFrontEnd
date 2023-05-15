@@ -27,8 +27,20 @@
     box-shadow: -5px -5px 10px 0px rgba(0, 0, 0, 0.81);
 }
 
-.btn {
-    position: relative;
-    left: 93%;
+.boton {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
 }
 
+@media screen and (min-width: 360px) and (max-width: 500px) {
+    .acercaDe {
+        height: 140vh;
+    }
+
+    .btn {
+        position: unset;
+        margin-left: 125px;
+    }
+}

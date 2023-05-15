@@ -3,7 +3,7 @@
 #titulo3 {
     font-family: 'Tilt Warp', cursive;
     margin-top: 50px;
-    
+
     color: var(--main-color);
 }
 
@@ -40,7 +40,27 @@
     color: black;
 }
 
-.btn {
-    position: absolute;
-    left: 83%;
+.boton {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (min-width: 360px) and (max-width: 500px) {
+    .card {
+        filter: none;
+        -webkit-box-shadow: -5px -5px 10px 0px rgba(0, 0, 0, 0.81);
+        -moz-box-shadow: -5px -5px 10px 0px rgba(0, 0, 0, 0.81);
+        box-shadow: -5px -5px 10px 0px rgba(0, 0, 0, 0.81);
+    }
+
+    .card:hover {
+        transform: none;
+    }
+
+    .btn {
+        position: unset;
+        margin-left: 95px;
+    }
 }

@@ -1,8 +1,10 @@
 <!-- ACERCA DE -->
 <section class="acercaDe container">
     <h2 id="titulo" class="pb-2 border-bottom">ACERCA DE</h2>
-    <button type="button" class="btn btn-primary" routerLink="/editacercade/1" *ngIf="isLogged"><i
-            class="bi bi-pencil-fill"></i> Editar</button>
+    <div class="boton">
+        <button type="button" class="btn btn-primary" routerLink="/editacercade/1" *ngIf="isLogged"><i
+            class="bi bi-pencil-fill"></i> Editar</button>    
+    </div>
     <div id="card_foto" class="card mb-3" style="max-width: 940px;">
         <div class="row g-0">
             <div class="fotoPerfil col-sm-12 col-md-4 col-lg-4">

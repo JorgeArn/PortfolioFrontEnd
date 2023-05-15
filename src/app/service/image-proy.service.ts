@@ -31,7 +31,6 @@ export class ImageProyService {
     .catch(error => console.log(error))
   }
 
-
   clearUrl() {
     this.url = "";
   }
