@@ -6,13 +6,19 @@
     </div>
     <div class="skill" *ngFor="let Skills of skl">
         <div class="caja-skill">
-            <div class="info">
-                <p><span class="lista"></span>{{Skills.nombre}}</p>
-                <span class="porcentaje">{{Skills.porcentaje}}%</span>
-            </div>
-            <div class="barra">
-                <div id={{Skills.nombre}} class=""></div>
-            </div>
+            <circle-progress
+            [percent]="(Skills.porcentaje)"
+            [radius]="100"
+            [title]="(Skills.nombre)"
+            [showTitle]="true"
+            [titleColor]="'#ffff'"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="8"
+            [outerStrokeColor]="'#f987f3'"
+            [innerStrokeColor]="'#3c43fc'"
+            [animation]="true"
+            [animationDuration]="800"
+            ></circle-progress>
         </div>
         <div class="iconos">
             <a routerLink="/editskill/{{Skills.id}}"><i class="bi bi-pencil-fill" *ngIf="isLogged"></i></a>

@@ -29,7 +29,6 @@ export class EditExperienciaComponent implements OnInit {
         this.router.navigate(['']);
       }
     })
-
   }
 
   onUpdate(): void {
@@ -55,10 +54,8 @@ export class EditExperienciaComponent implements OnInit {
   }
 
   cancel(): void {
-
     this.imageExpService.clearUrl();
     this.router.navigate(['']);
-
   }
 
 }

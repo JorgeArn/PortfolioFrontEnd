@@ -30,6 +30,8 @@ export class ImageExpService {
     .catch(error => console.log(error))
   }
 
+
+
   clearUrl() {
     this.url = "";
   }
