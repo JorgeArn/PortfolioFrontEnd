@@ -8,7 +8,9 @@ export const environment = {
     authDomain: 'miportfoliojlarn.firebaseapp.com',
     messagingSenderId: '53313585259',
   },
-    production: false,
-    //URL: 'http://localhost:8080',
-    URL: 'https://backendjorgearn.onrender.com'
+
+  production: true,
+  URL: 'https://backendjorgearn.onrender.com'
+
+
 };

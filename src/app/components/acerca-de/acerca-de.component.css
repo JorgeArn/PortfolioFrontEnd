@@ -21,6 +21,11 @@
     color: var(--main-color);
 }
 
+.card-text {
+    font-family: 'Diphylleia', serif;
+    font-size: 20px;
+}
+
 .fotoPerfil {
     -webkit-box-shadow: -5px -5px 10px 0px rgba(0, 0, 0, 0.81);
     -moz-box-shadow: -5px -5px 10px 0px rgba(0, 0, 0, 0.81);
@@ -42,5 +47,9 @@
     .btn {
         position: unset;
         margin-left: 125px;
+    }
+
+    .card-text {
+        font-size: 15px;
     }
 }

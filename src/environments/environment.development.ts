@@ -7,4 +7,8 @@ export const environment = {
     apiKey: 'AIzaSyAchTinG5OYIWBDQy3ORzliAcitn2drMAc',
     authDomain: 'miportfoliojlarn.firebaseapp.com',
     messagingSenderId: '53313585259',
-  },};
+  },
+
+  production: false,
+  URL: 'http://localhost:8080'
+};
